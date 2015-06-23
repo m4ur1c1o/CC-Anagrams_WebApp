@@ -1,0 +1,13 @@
+<h1>Find Anagrams!</h1>
+
+<% if @new_word %>
+  <p>Estos son anagramas para '<%= @new_word %>':</p>
+  <ul>
+  	<% @anagrams.each do |word| %>
+  		<li><%= word.term %></li>
+  	<% end %>
+  </ul>
+<% end %>
+<br><br>
+<p><strong>Nueva busqueda</strong></p>
+<%= erb :_word_form %>
